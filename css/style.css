@@ -1,0 +1,42 @@
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.loading-bar {
+    height: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.loading-bar-slice {
+    height: 10.5px;
+    margin-top: -0.5px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #bf00ff, #0022ff);
+    animation-name: loading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: all 0.5s ease; 
+}
+
+@keyframes loading {
+    0% {
+        width: 0px;
+        opacity: 1;
+    }
+    50% {
+        width: 250px;
+        opacity: 0.5;
+        
+    }
+    100% {
+        width: 0px;
+        opacity: 0.3s;
+    }
+}
